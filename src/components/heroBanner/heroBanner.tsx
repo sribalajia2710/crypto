@@ -20,7 +20,7 @@ function HeroBanner() {
     <div className="hero-banner">
         <div className="hero-content">
         <p>Stay Informed with Real-Time Crypto Market Updates</p>
-        <div className="table-container"> {/* Add a container for market cards */}
+        <div className="table-container">
         <MarketSummaryTable data={marketData} />
         </div>
       </div>
