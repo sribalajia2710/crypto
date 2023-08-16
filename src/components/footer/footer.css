@@ -1,0 +1,59 @@
+.footer {
+  background: rgb(7,222,227);
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 24px;
+  }
+  
+  .links a {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .social-icons a i {
+    color: black;
+  }
+  
+  .social-icons a:hover {
+    text-decoration: underline;
+  }

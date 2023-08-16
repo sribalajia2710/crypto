@@ -1,0 +1,49 @@
+.hero-banner {
+  background: rgb(19,19,19);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .hero-content {
+    color: white;
+    text-align: center;
+    width: 80%; /* Set the width to the desired value (e.g., 80%) */
+    /* padding: 2em; Add some padding for spacing */
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    background: rgb(19,19,19);
+  }
+  
+  .hero-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    background: rgb(19,19,19);
+  }
+  
+  .cta-button {
+    /* background-color: rgb(253, 183, 59); */
+    color: black;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* .cta-button:hover {
+    background-color: rgb(253, 204, 59);
+  } */
+  
+  .cta-wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+  }

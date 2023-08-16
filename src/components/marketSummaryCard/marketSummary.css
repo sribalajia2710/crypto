@@ -1,0 +1,76 @@
+/* Style the wrapper container */
+.table-container {
+    width: 100%; 
+    margin: 0 auto;
+    max-height: 400px;
+    overflow-y: auto; 
+    margin-bottom: 2em;
+  }
+
+  /* Style the table */
+.table {
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+  }
+  
+  /* Style the table header */
+  .table-container .table th {
+    position: sticky;
+    top: 0;
+    background-color: #1F2739;
+    z-index: 1;
+    padding: 12px;
+    text-align: left;
+    color: #4DC3FA;
+  }
+  
+  /* Style the table body rows */
+  .table tbody tr {
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* Style alternating row colors */
+  .table tbody tr:nth-child(even) {
+    background-color: #2C3446;
+  }
+  
+  /* Style the table cells */
+  .table tbody td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #0E1119;
+    color: #A7A1AE;
+    white-space: nowrap;
+  }
+
+  .table tbody td:first-child { color: #FB667A; }
+  
+  /* Add hover effect to table rows */
+  .table tbody tr:hover {
+    background-color: #464A52;
+    box-shadow: 0 6px 6px -6px #0E1119;
+  }
+  
+  
+  /* Customize the scrollbar styles */
+.table-container::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+  }
+  
+  .table-container::-webkit-scrollbar-thumb {
+    background-color: rgb(7, 222, 227); /* Set the scrollbar thumb color */
+    border-radius: 3px; /* Set the thumb border radius */
+    height: 10px;
+  }
+  
+  .table-container::-webkit-scrollbar-track {
+    background-color: #1F2739; /* Set the scrollbar track color */
+  }
+  
+  .table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #06c5ca; /* Set the thumb color on hover */
+  }
