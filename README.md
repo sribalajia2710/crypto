@@ -6,9 +6,9 @@ To get started with this project, please follow the steps below:
 
 2. Navigate to the project directory crypto
 
-  Install the dependencies using the following command:
+   Install the dependencies using the following command:
 
-  npm install
+   npm install
 
 3. Start the development server using the following command:
 
