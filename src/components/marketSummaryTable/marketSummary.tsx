@@ -1,4 +1,3 @@
-// components/MarketSummaryTable.tsx
 import React from 'react';
 import { useTable, Column } from 'react-table';
 import './MarketSummary.css';
@@ -89,7 +88,7 @@ const MarketSummaryTable: React.FC<MarketSummaryTableProps> = ({ data }) => {
         ))}
       </thead>
       <tbody {...getTableBodyProps()}>
-        {rows.map((row) => {
+        {rows.length > 0 ? rows.map((row) => {
           prepareRow(row);
           return (
             <tr {...row.getRowProps()}>
@@ -100,7 +99,9 @@ const MarketSummaryTable: React.FC<MarketSummaryTableProps> = ({ data }) => {
               })}
             </tr>
           );
-        })}
+        }) : <tr className='tbody-no-data'>
+        <td colSpan={columns.length}>No Data Found</td>
+      </tr>}
       </tbody>
     </table>
   );

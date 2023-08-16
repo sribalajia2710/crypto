@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import "./herobanner.css";
-import MarketSummaryTable from "../../components/marketSummaryCard/marketSummary";
+import MarketSummaryTable from "../marketSummaryTable/marketSummary";
 import { useMarketData } from "../../marketDataContext";
 import { fetchMarketSummary } from "../../api/marketSummary";
 

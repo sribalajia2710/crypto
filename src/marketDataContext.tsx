@@ -45,6 +45,7 @@ export const MarketDataProvider: React.FC<MarketDataContextProps> = ({
       setMarketData([data]);
     } catch (error) {
       console.error("Error fetching market summary:", error);
+      setMarketData([]);
     }
   };
 

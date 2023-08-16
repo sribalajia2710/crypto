@@ -48,6 +48,10 @@
   }
 
   .table tbody td:first-child { color: #FB667A; }
+
+  .table tbody .tbody-no-data td{
+    text-align: center;
+  }
   
   /* Add hover effect to table rows */
   .table tbody tr:hover {
