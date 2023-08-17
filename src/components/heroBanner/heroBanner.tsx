@@ -1,29 +1,40 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 import "./herobanner.css";
 import MarketSummaryTable from "../marketSummaryTable/marketSummary";
-import { useMarketData } from "../../marketDataContext";
-import { fetchMarketSummary } from "../../api/marketSummary";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchMarketItemsStart,
+  showLoader,
+} from "../../redux/cryptoMarket/market.actions";
+import {
+  selectCryptoMarketItems,
+  selectShowLoader,
+} from "../../redux/cryptoMarket/market.selector";
 
 function HeroBanner() {
-  const { marketData, setMarketData } = useMarketData();
+  const dispatch = useDispatch();
+  const marketItems = useSelector(selectCryptoMarketItems);
+  const loading = useSelector(selectShowLoader);
 
   useEffect(() => {
-    fetchMarketSummary()
-      .then((data) => {
-        setMarketData(data);
-      })
-      .catch((error) => {
-        console.error('Error fetching market summary:', error);
-      });
+    dispatch(showLoader(true));
+    dispatch(fetchMarketItemsStart());
   }, []);
+
   return (
     <div className="hero-banner">
-        <div className="hero-content">
-        <p>Stay Informed with Real-Time Crypto Market Updates</p>
-        <div className="table-container">
-        <MarketSummaryTable data={marketData} />
+      {loading ? (
+        <div className="loader-container">
+          <div className="spinner"></div>
         </div>
-      </div>
+      ) : (
+        <div className="hero-content">
+          <p>Stay Informed with Real-Time Crypto Market Updates</p>
+          <div className="table-container">
+            <MarketSummaryTable data={marketItems} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

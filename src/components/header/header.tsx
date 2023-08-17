@@ -1,13 +1,19 @@
 import { useForm } from "react-hook-form";
 import "./header.css";
-import { useMarketData } from "../../marketDataContext";
+import { useDispatch } from 'react-redux'
+import { fetchCurrencySearchStart, showLoader } from '../../redux/cryptoMarket/market.actions'
 
 type FormData = {
   searchTerm: string;
 };
 
 function Header() {
-  const { handleSearch } = useMarketData();
+
+  const dispatch = useDispatch();
+  const handleSearch = async (symbol: string) => {
+    dispatch(showLoader(true))
+    dispatch(fetchCurrencySearchStart(symbol));
+  };
 
   const {
     register,

@@ -3,11 +3,9 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import HeroBanner from "./components/heroBanner/heroBanner";
 import "./App.css";
-import { MarketDataProvider } from "./marketDataContext";
 
 function App() {
   return (
-    <MarketDataProvider>
       <div className="App">
         <Router>
           <Header />
@@ -17,7 +15,6 @@ function App() {
           <Footer />
         </Router>
       </div>
-    </MarketDataProvider>
   );
 }
 
