@@ -1,4 +1,3 @@
-// MarketDataContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { searchCurrencyBySymbol } from "./api/marketSummary";
 
@@ -38,7 +37,6 @@ export const MarketDataProvider: React.FC<MarketDataContextProps> = ({
   children,
 }) => {
   const [marketData, setMarketData] = useState<MarketData[]>([]);
-
   const handleSearch = async (symbol: string) => {
     try {
       const data = await searchCurrencyBySymbol(symbol);

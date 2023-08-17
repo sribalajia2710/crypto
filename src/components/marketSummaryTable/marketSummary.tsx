@@ -58,7 +58,7 @@ const MarketSummaryTable: React.FC<MarketSummaryTableProps> = ({ data }) => {
         accessor: 'updatedAt',
         Cell: ({ value }) => {
           const dateTime = new Date(value);
-          return dateTime.toLocaleString(); // Convert to local date and time format
+          return dateTime.toLocaleString();
         },
       },
     ],
