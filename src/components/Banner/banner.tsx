@@ -1,5 +1,5 @@
 import "./Banner.css"; // Import the plain CSS file
-// import Carousel from "./Carousel";
+import Carousel from "../Carousel/carousel";
 
 function Banner() {
   return (
@@ -11,7 +11,7 @@ function Banner() {
             Get all the Info regarding your favorite Crypto Currency
           </p>
         </div>
-        {/* <Carousel /> */}
+        <Carousel />
       </div>
     </div>
   );

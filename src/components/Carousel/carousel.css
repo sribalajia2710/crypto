@@ -1,0 +1,47 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .carousel {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .carousel img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Custom dots */
+  .carousel .alice-carousel__dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .carousel .alice-carousel__dots-item {
+    background-color: #ccc;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel .alice-carousel__dots-item.__active {
+    background-color: #333;
+  }
+  
+  /* Hide navigation buttons */
+  .carousel .alice-carousel__prev-btn,
+  .carousel .alice-carousel__next-btn {
+    display: none;
+  }
+  

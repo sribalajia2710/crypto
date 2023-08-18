@@ -16,6 +16,7 @@
     "axios": "^1.4.0",
     "font-awesome": "^4.7.0",
     "react": "^18.2.0",
+    "react-alice-carousel": "^2.7.1",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
     "react-router": "^6.15.0",
@@ -26,6 +27,7 @@
     "redux-saga": "^1.2.3"
   },
   "devDependencies": {
+    "@types/node": "^20.5.1",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@types/redux-logger": "^3.0.9",
