@@ -1,9 +1,16 @@
 import "./footer.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import {
+  selectShowLoader,
+} from "../../redux/cryptoMarket/market.selector";
 
 function Footer() {
+  const loading = useSelector(selectShowLoader);
+
   return (
-    <div className="footer">
+    <>
+        {!loading && <div className="footer">
       <div className="footer-content">
         <div className="logo">
           <span>Crypto Pulse</span>
@@ -35,7 +42,9 @@ function Footer() {
           </a>
         </div>
       </div>
-    </div>
+    </div>}
+    </>
+
   );
 }
 

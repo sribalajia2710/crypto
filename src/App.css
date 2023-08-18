@@ -1,5 +1,4 @@
 .App{
-    height: 100vh;
     @media (max-width: 767px) {
         height: 100%;
         width: 100%;

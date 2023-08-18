@@ -2,7 +2,7 @@
   background: rgb(19,19,19);
     background-size: cover;
     background-position: center;
-    height: 600px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -11,8 +11,8 @@
   .home-page-content {
     color: white;
     text-align: center;
-    width: 80%; /* Set the width to the desired value (e.g., 80%) */
-    /* padding: 2em; Add some padding for spacing */
+    width: 100%;
+    background: rgb(6,7,13);
   }
   
   .home-page-content h1 {
@@ -24,7 +24,6 @@
   .home-page-content p {
     font-size: 24px;
     margin-bottom: 40px;
-    background: rgb(19,19,19);
   }
 
   .loader-container {

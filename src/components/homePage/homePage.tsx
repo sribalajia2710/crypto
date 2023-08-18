@@ -10,6 +10,7 @@ import {
   selectCryptoMarketItems,
   selectShowLoader,
 } from "../../redux/cryptoMarket/market.selector";
+import Banner from "../Banner/banner";
 
 function HomePage() {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ function HomePage() {
         </div>
       ) : (
         <div className="home-page-content">
-          <p>Stay Informed with Real-Time Crypto Market Updates</p>
+          <Banner/>
           <div className="table-container">
             <MarketSummaryTable data={marketItems} />
           </div>

@@ -1,6 +1,6 @@
 /* Style the wrapper container */
 .table-container {
-    width: 100%; 
+    width: 80%; 
     margin: 0 auto;
     max-height: 400px;
     overflow-y: auto; 
@@ -14,7 +14,7 @@
     border-collapse: collapse;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2em;
+    margin: 0 auto;
   }
   
   /* Style the table header */
