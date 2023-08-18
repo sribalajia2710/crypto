@@ -1,4 +1,3 @@
-import logo from "../../assets/logo.png";
 import "./footer.css";
 import { Link } from "react-router-dom";
 
@@ -7,8 +6,7 @@ function Footer() {
     <div className="footer">
       <div className="footer-content">
         <div className="logo">
-          <img src={logo} alt="Crypto watch imasge" />
-          <span>CryptoWatch</span>
+          <span>Crypto Pulse</span>
         </div>
         <div className="links">
           <Link className="header-link" to="/">
@@ -24,7 +22,7 @@ function Footer() {
             Terms of Use
           </Link>
         </div>
-        <p style={{ fontWeight: "bold" }}>&copy; 2023 Sribalaji &trade;</p>
+        <p style={{ fontWeight: "bold" }}>&copy; 2023 SriBalaji &trade; All Rights Reserved</p>
         <div className="social-icons">
           <a href="https://www.facebook.com">
             <i className="fab fa-facebook"></i>

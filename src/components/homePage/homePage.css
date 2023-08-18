@@ -1,4 +1,4 @@
-.hero-banner {
+.home-page {
   background: rgb(19,19,19);
     background-size: cover;
     background-position: center;
@@ -8,20 +8,20 @@
     align-items: start;
   }
   
-  .hero-content {
+  .home-page-content {
     color: white;
     text-align: center;
     width: 80%; /* Set the width to the desired value (e.g., 80%) */
     /* padding: 2em; Add some padding for spacing */
   }
   
-  .hero-content h1 {
+  .home-page-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
     background: rgb(19,19,19);
   }
   
-  .hero-content p {
+  .home-page-content p {
     font-size: 24px;
     margin-bottom: 40px;
     background: rgb(19,19,19);

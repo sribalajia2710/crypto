@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import HeroBanner from "./components/heroBanner/heroBanner";
+import HomePage from "./components/homePage/homePage";
 import "./App.css";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <Router>
           <Header />
           <Routes>
-            <Route path="/" element={<HeroBanner />} />
+            <Route path="/" element={<HomePage />} />
           </Routes>
           <Footer />
         </Router>

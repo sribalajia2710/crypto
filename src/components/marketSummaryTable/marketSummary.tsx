@@ -44,7 +44,7 @@ const MarketSummaryTable: React.FC<MarketSummaryTableProps> = ({ data }) => {
         Cell: ({ value }) => parseFloat(value).toFixed(4).toString(),
       },
       {
-        Header: 'Percent Change',
+        Header: 'Percent Change (24h)',
         accessor: 'percentChange', 
         Cell: ({ value }: any) => {
           if(value === undefined) {

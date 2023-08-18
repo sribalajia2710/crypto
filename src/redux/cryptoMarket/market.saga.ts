@@ -51,7 +51,7 @@ export function* fetchCurrencySearchStartAsync(
         cryptoMarketApi.searchCurrencyBySymbol,
         action.payload
       );
-      yield put(fetchCurrencySearchSuccess(data));
+      yield put(fetchCurrencySearchSuccess([data]));
     } else {
       const { status }: { status: number } = yield call(
         cryptoMarketApi.fetchMarketSummary

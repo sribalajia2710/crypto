@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./herobanner.css";
+import "./homePage.css";
 import MarketSummaryTable from "../marketSummaryTable/marketSummary";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -11,7 +11,7 @@ import {
   selectShowLoader,
 } from "../../redux/cryptoMarket/market.selector";
 
-function HeroBanner() {
+function HomePage() {
   const dispatch = useDispatch();
   const marketItems = useSelector(selectCryptoMarketItems);
   const loading = useSelector(selectShowLoader);
@@ -22,13 +22,13 @@ function HeroBanner() {
   }, []);
 
   return (
-    <div className="hero-banner">
+    <div className="home-page">
       {loading ? (
         <div className="loader-container">
           <div className="spinner"></div>
         </div>
       ) : (
-        <div className="hero-content">
+        <div className="home-page-content">
           <p>Stay Informed with Real-Time Crypto Market Updates</p>
           <div className="table-container">
             <MarketSummaryTable data={marketItems} />
@@ -39,4 +39,4 @@ function HeroBanner() {
   );
 }
 
-export default HeroBanner;
+export default HomePage;

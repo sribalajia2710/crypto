@@ -10,6 +10,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 767px) {
+      row-gap: 8px;
+      justify-content: center;
+      padding-bottom: 14px;
+    }
+  }
+
+  .footer-content p {
+    @media (max-width: 767px) {
+      margin: 0px;
+    }
   }
   
   .logo {
