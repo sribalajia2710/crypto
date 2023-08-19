@@ -55,6 +55,18 @@
       text-align: start;
     }
   }
+
+.percent-change.positive {
+  color: green;
+}
+
+.percent-change.negative {
+  color: red;
+}
+
+.na {
+  color: gray;
+}
   
   /* Add hover effect to table rows */
   .table tbody tr:hover {

@@ -47,10 +47,17 @@ const MarketSummaryTable: React.FC<MarketSummaryTableProps> = ({ data }) => {
         Header: 'Percent Change (24h)',
         accessor: 'percentChange', 
         Cell: ({ value }: any) => {
-          if(value === undefined) {
-            return 'N/A';
+          if (value === undefined) {
+            return <span className="na">N/A</span>;
           }
-          return `${value}%`;
+          const changeClass =
+            value > 0 ? "positive" : value < 0 ? "negative" : "";
+
+          return (
+            <span className={`percent-change ${changeClass}`}>
+              {value}%
+            </span>
+          );
         },
       },
       {
