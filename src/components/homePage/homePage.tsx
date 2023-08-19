@@ -26,12 +26,12 @@ function HomePage() {
     <div className="home-page">
       {loading ? (
         <div className="loader-container">
-          <div className="spinner"></div>
+          <div className="spinner" data-testid="loading-spinner"></div>
         </div>
       ) : (
         <div className="home-page-content">
           <Banner/>
-          <div className="table-container">
+          <div className="table-container" data-testid="market-summary-table">
             <MarketSummaryTable data={marketItems} />
           </div>
         </div>
