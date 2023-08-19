@@ -32,7 +32,7 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" data-testid="carousel">
       <AliceCarousel
         mouseTracking
         infinite
