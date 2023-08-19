@@ -8,7 +8,7 @@ function Banner() {
         <div className="tagline">
           <h2 className="tagline-heading">Crypto Pulse</h2>
           <p className="tagline-text">
-            Get all the Info regarding your favorite Crypto Currency
+          Empowering Your Trading Decisions In The Get Go
           </p>
         </div>
         <Carousel />

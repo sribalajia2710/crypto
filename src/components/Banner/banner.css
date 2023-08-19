@@ -15,15 +15,18 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    /* Add other tagline styles here */
+    @media (max-width: 767px) {
+      align-items: center;
+      }
   }
   
   .tagline-heading {
     font-weight: bold;
     margin-bottom: 15px;
     font-family: Montserrat, sans-serif;
-    @media (min-width: 767px) {
-        font-size: 60px;
+    font-size: 60px;
+    @media (max-width: 767px) {
+      display: none;
       }
   }
   
@@ -31,5 +34,9 @@
     color: darkgrey;
     text-transform: capitalize;
     font-family: Montserrat, sans-serif;
+    @media (max-width: 767px) {
+      color: white;
+      width: 65%;
+      }
   }
   

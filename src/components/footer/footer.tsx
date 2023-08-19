@@ -31,13 +31,13 @@ function Footer() {
         </div>
         <p style={{ fontWeight: "bold" }}>&copy; 2023 SriBalaji &trade; All Rights Reserved</p>
         <div className="social-icons">
-          <a href="https://www.facebook.com">
+          <a href="https://www.facebook.com/CryptoComOfficial/" target="_blank">
             <i className="fab fa-facebook"></i>
           </a>
-          <a href="https://www.twitter.com">
+          <a href="https://twitter.com/cryptocom" target="_blank">
             <i className="fab fa-twitter"></i>
           </a>
-          <a href="https://www.instagram.com">
+          <a href="https://www.instagram.com/cryptocomofficial/" target="_blank">
             <i className="fab fa-instagram"></i>
           </a>
         </div>
