@@ -7,7 +7,7 @@ const initialCryptoMarketData = {
     showLoader: false,
   };
   
-  const mockMarketDataReducer = (state = initialCryptoMarketData, action: any) => {
+  const mockMarketDataReducer = (state = initialCryptoMarketData) => {
     return state;
   };
   
