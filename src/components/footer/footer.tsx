@@ -32,13 +32,13 @@ function Footer() {
         <p style={{ fontWeight: "bold" }}>&copy; 2023 SriBalaji &trade; All Rights Reserved</p>
         <div className="social-icons">
           <a href="https://www.facebook.com/CryptoComOfficial/" target="_blank">
-            <i className="fab fa-facebook"></i>
+            <i className="fab fa-facebook" data-testid="facebook-icon"></i>
           </a>
           <a href="https://twitter.com/cryptocom" target="_blank">
-            <i className="fab fa-twitter"></i>
+            <i className="fab fa-twitter" data-testid="twitter-icon"></i>
           </a>
           <a href="https://www.instagram.com/cryptocomofficial/" target="_blank">
-            <i className="fab fa-instagram"></i>
+            <i className="fab fa-instagram" data-testid="instagram-icon"></i>
           </a>
         </div>
       </div>

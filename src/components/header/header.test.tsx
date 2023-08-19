@@ -5,6 +5,7 @@ import {
   screen,
   fireEvent,
 } from "../../test-utils";
+import { act } from 'react-dom/test-utils';
 
 describe("Header Component", () => {
   it('displays the title "Crypto Pulse"', () => {
@@ -21,7 +22,9 @@ describe("Header Component", () => {
     const searchButton = screen.getByText("Search");
 
     fireEvent.change(searchInput, { target: { value: "1ECO-BTC" } });
-    fireEvent.click(searchButton);
+    act(() => {
+      fireEvent.click(searchButton);
+    });
   });
 
   it("displays validation error with invalid input", async () => {
