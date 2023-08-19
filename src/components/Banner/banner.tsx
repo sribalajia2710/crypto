@@ -1,5 +1,5 @@
-import "./Banner.css"; // Import the plain CSS file
-import Carousel from "../Carousel/carousel";
+import "./banner.css";
+import Carousel from "../carousel/carousel";
 
 function Banner() {
   return (

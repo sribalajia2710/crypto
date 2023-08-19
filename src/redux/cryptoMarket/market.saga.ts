@@ -21,7 +21,7 @@ interface MarketData {
 
 type FetchCurrencySearchStartAction = {
   type: typeof MarketDataActionTypes.FETCH_CURRENCY_SEARCH_START;
-  payload: string; // Adjust the type accordingly
+  payload: string;
 };
 
 export function* fetchMarketItemsStartAsync({}) {
