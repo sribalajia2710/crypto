@@ -99,9 +99,9 @@ const MarketSummaryTable: React.FC<MarketSummaryTableProps> = ({ data }) => {
           prepareRow(row);
           return (
             <tr {...row.getRowProps()}>
-              {row.cells.map((cell) => {
+              {row.cells.map((cell, index) => {
                 return (
-                  <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                  <td {...cell.getCellProps()} data-testid={`market-item-${columns[index].accessor}-${cell.value}`}>{cell.render('Cell')}</td>
                 );
               })}
             </tr>
