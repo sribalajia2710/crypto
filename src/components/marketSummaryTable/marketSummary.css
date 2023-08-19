@@ -3,7 +3,7 @@
     width: 80%; 
     margin: 0 auto;
     max-height: 400px;
-    overflow-y: auto; 
+    overflow-y: auto;
     margin-bottom: 2em;
   }
 
@@ -51,6 +51,9 @@
 
   .table tbody .tbody-no-data td{
     text-align: center;
+    @media (max-width: 767px) {
+      text-align: start;
+    }
   }
   
   /* Add hover effect to table rows */
@@ -63,6 +66,7 @@
   /* Customize the scrollbar styles */
 .table-container::-webkit-scrollbar {
     width: 6px; /* Set the width of the scrollbar */
+    height: 6px;
   }
   
   .table-container::-webkit-scrollbar-thumb {

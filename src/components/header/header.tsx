@@ -21,11 +21,32 @@ function Header() {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
+    setValue,
+    trigger
   } = useForm<FormData>();
 
   const onSubmit = (data: FormData) => {
     handleSearch(data.searchTerm);
   };
+
+  const validateSearchTerm = (value: string) => {
+    console.log('value', value, /^[a-zA-Z0-9-]*$/.test(value))
+    if (/^[a-zA-Z0-9-]*$/.test(value)) {
+      if (value.length >= 6) {
+        return true;
+      } else {
+        return "Minimum 6 characters is required";
+      }
+    } else {
+      return "Use Alphanumeric & Hyphen Only";
+    }
+  };
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setValue("searchTerm", e.target.value);
+      trigger("searchTerm"); // Trigger validation
+    };
 
   return (
     <div className="header">
@@ -40,18 +61,19 @@ function Header() {
               type="text"
               placeholder="Search currency..."
               {...register("searchTerm", {
-                minLength: 6,
+                validate: validateSearchTerm,
               })}
               autoComplete="off"
+              onChange={handleInputChange} 
             />
             {errors.searchTerm && (
-              <p className="error-text">Minimum 6 characters is required</p>
+              <p className="error-text">{errors.searchTerm.message}</p>
             )}
           </div>
           <button
             className="search-btn"
             type="submit"
-            disabled={!!errors.searchTerm}
+            disabled={!!errors.searchTerm || !watch("searchTerm")}
           >
             Search
           </button>

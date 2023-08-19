@@ -7,7 +7,7 @@
     padding: 0 50px;
   }
   color: rgb(7, 222, 227);
-  background: rgb(6,7,13);
+  background: rgb(6, 7, 13);
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -86,6 +86,10 @@ div.search-wrapper.error {
   color: red;
   margin-left: 0.5rem;
   font-size: 0.875rem;
+  z-index: 10;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 
 .search-btn {
@@ -100,6 +104,6 @@ div.search-wrapper.error {
 }
 
 .search-btn:disabled {
-  background-color: #ccc;
+  opacity: 0.5;
   cursor: not-allowed;
 }
