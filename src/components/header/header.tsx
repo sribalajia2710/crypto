@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./header.css";
 import { useDispatch } from "react-redux";
@@ -11,10 +12,12 @@ type FormData = {
 };
 
 function Header() {
+  const [searchTerm, setSearchTerm] = useState<string>("");
   const dispatch = useDispatch();
-  const handleSearch = async (symbol: string) => {
+
+  const handleSearch = () => {
     dispatch(showLoader(true));
-    dispatch(fetchCurrencySearchStart(symbol));
+    dispatch(fetchCurrencySearchStart(searchTerm));
   };
 
   const {
@@ -26,12 +29,11 @@ function Header() {
     trigger
   } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
-    handleSearch(data.searchTerm);
+  const onSubmit = () => {
+    handleSearch();
   };
 
   const validateSearchTerm = (value: string) => {
-    console.log('value', value, /^[a-zA-Z0-9-]*$/.test(value))
     if (/^[a-zA-Z0-9-]*$/.test(value)) {
       if (value.length >= 6) {
         return true;
@@ -44,8 +46,10 @@ function Header() {
   };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setValue("searchTerm", e.target.value);
+      const inputValue = e.target.value;
+      setValue("searchTerm", inputValue);
       trigger("searchTerm"); // Trigger validation
+      setSearchTerm(inputValue);
     };
 
   return (
@@ -64,7 +68,8 @@ function Header() {
                 validate: validateSearchTerm,
               })}
               autoComplete="off"
-              onChange={handleInputChange} 
+              onChange={handleInputChange}
+              value={searchTerm}
             />
             {errors.searchTerm && (
               <p className="error-text">{errors.searchTerm.message}</p>
