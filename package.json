@@ -2,6 +2,7 @@
   "name": "crypto",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://sribalajia2710.github.io/crypto/",
   "type": "module",
   "scripts": {
     "dev": "vite",
