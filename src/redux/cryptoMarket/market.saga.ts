@@ -30,6 +30,7 @@ export function* fetchMarketItemsStartAsync({}) {
     yield put(fetchMarketItemsSuccess(data));
     yield put(showLoader(false));
   } catch (error: any) {
+    console.error(error.message)
     yield put(fetchMarketItemsFailure(error.message));
     yield put(showLoader(false));
   }
@@ -68,7 +69,8 @@ export function* fetchCurrencySearchStartAsync(
     }
     yield put(showLoader(false));
   } catch (error: any) {
-    yield put(fetchCurrencySearchSuccess([]));
+    console.error(error.message)
+    yield put(fetchCurrencySearchSuccess([])); 
     yield put(fetchCurrencySearchFailure(error.message));
     yield put(showLoader(false));
   }
