@@ -18,7 +18,7 @@ To get started with this project, please follow the steps below:
 
 5. Please install CORS Unblock extension if CORS error occurs
 
-6. Live Site: https://crypto-pulse-app.netlify.app/
+6. Live Site: https://crypto-pulse-live.netlify.app/
 
    **Important Note:** Please install CORS Unblock extension to remove CORS error in the network tab
    https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino
