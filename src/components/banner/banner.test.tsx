@@ -14,7 +14,7 @@ describe('Banner Component', () => {
   it('displays the tagline text', () => {
     renderWithProvider(<Banner />);
     expect(
-      screen.getByText(/Empowering Your Trading Decisions In The Get Go/i)
+      screen.getByText(/Get The Crypto Market Summary In The Get Go/i)
     ).toBeInTheDocument();
   });
 
