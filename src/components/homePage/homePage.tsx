@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./homePage.css";
-import MarketSummaryTable from "../marketSummaryTable/mmarketSummary";
+import MarketSummaryTable from "../marketSummaryTable/marketSummary";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchMarketItemsStart,
@@ -10,7 +10,7 @@ import {
   selectCryptoMarketItems,
   selectShowLoader,
 } from "../../redux/cryptoMarket/market.selector";
-import Banner from "../banner/bbanner";
+import Banner from "../banner/banner";
 
 function HomePage() {
   const dispatch = useDispatch();

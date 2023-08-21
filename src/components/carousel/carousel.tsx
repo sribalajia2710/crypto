@@ -1,7 +1,7 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import './ccarousel.css'
+import './carousel.css'
 import imageUsdt from '../../assets/usdt.png';
 import imageEth from '../../assets/eth.png';
 import imageBtc from '../../assets/btc.png';
