@@ -36,6 +36,8 @@ describe('MarketSummaryTable Component', () => {
     expect(screen.getByText('1ECO-BTC')).toBeInTheDocument();
     expect(screen.getByText('143.9000')).toBeInTheDocument();
     expect(screen.getByText('0.0006')).toBeInTheDocument();
+    expect(screen.getByText('-3.1%')).toBeInTheDocument();
+    expect(screen.getByText('19/8/2023, 8:17:02 am')).toBeInTheDocument();
 });
 
   it('renders "No Data Found" when no market items are provided', () => {
