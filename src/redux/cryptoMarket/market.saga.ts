@@ -68,6 +68,7 @@ export function* fetchCurrencySearchStartAsync(
     }
     yield put(showLoader(false));
   } catch (error: any) {
+    yield put(fetchCurrencySearchSuccess([]));
     yield put(fetchCurrencySearchFailure(error.message));
     yield put(showLoader(false));
   }
