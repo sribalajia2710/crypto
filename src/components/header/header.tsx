@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "./header.css";
 import { useDispatch } from "react-redux";
 import {
   fetchCurrencySearchStart,
+  fetchMarketItemsStart,
   showLoader,
 } from "../../redux/cryptoMarket/market.actions";
 
@@ -14,6 +15,13 @@ type FormData = {
 function Header() {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (searchTerm === "") {
+      dispatch(showLoader(true));
+      dispatch(fetchMarketItemsStart());
+    }
+  }, [searchTerm]);
 
   const handleSearch = () => {
     dispatch(showLoader(true));
@@ -26,7 +34,7 @@ function Header() {
     formState: { errors },
     watch,
     setValue,
-    trigger
+    trigger,
   } = useForm<FormData>();
 
   const onSubmit = () => {
@@ -45,12 +53,12 @@ function Header() {
     }
   };
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const inputValue = e.target.value;
-      setValue("searchTerm", inputValue);
-      trigger("searchTerm"); // Trigger validation
-      setSearchTerm(inputValue);
-    };
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = e.target.value;
+    setValue("searchTerm", inputValue);
+    trigger("searchTerm"); // Trigger validation
+    setSearchTerm(inputValue);
+  };
 
   return (
     <div className="header">
@@ -71,7 +79,7 @@ function Header() {
               onChange={handleInputChange}
               value={searchTerm}
             />
-            {errors.searchTerm && (
+            {searchTerm && errors.searchTerm && (
               <p className="error-text">{errors.searchTerm.message}</p>
             )}
           </div>
