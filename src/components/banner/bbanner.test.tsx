@@ -1,4 +1,4 @@
-import Banner from "./banner";
+import Banner from "./bbanner";
 import "@testing-library/jest-dom";
 import {
   render as renderWithProvider,

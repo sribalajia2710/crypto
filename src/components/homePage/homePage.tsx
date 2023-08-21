@@ -10,7 +10,7 @@ import {
   selectCryptoMarketItems,
   selectShowLoader,
 } from "../../redux/cryptoMarket/market.selector";
-import Banner from "../banner/banner";
+import Banner from "../banner/bbanner";
 
 function HomePage() {
   const dispatch = useDispatch();
