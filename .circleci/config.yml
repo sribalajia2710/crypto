@@ -18,12 +18,6 @@ jobs:
           name: Build Application
           command: npm run build
 
-      - run:
-          name: Deploy to Netlify
-          command: |
-            npm install -g netlify-cli
-            netlify deploy --prod --dir=./dist --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID
-
 workflows:
   version: 2
   build-deploy:
