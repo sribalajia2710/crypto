@@ -1,4 +1,4 @@
-import "./banner.css";
+import "./bbanner.css";
 import Carousel from "../carousel/ccarousel";
 
 function Banner() {
