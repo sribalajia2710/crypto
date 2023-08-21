@@ -32,7 +32,6 @@ describe('MarketSummaryTable Component', () => {
   it('renders market items correctly', () => {
     renderWithProvider(<MarketSummaryTable data={sampleMarketItems} />);
     
-    // Assert specific data elements are present
     expect(screen.getByText('1ECO-BTC')).toBeInTheDocument();
     expect(screen.getByText('143.9000')).toBeInTheDocument();
     expect(screen.getByText('0.0006')).toBeInTheDocument();
@@ -44,5 +43,4 @@ describe('MarketSummaryTable Component', () => {
     expect(screen.getByText(/No Data Found/i)).toBeInTheDocument();
   });
 
-  // You can add more test cases to cover different scenarios and interactions
 });
