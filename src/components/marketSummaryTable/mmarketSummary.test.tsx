@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import MarketSummaryTable from './marketSummary';
+import MarketSummaryTable from './mmarketSummary';
 import {
     render as renderWithProvider,
     screen

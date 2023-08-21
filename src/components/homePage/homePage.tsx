@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./homePage.css";
-import MarketSummaryTable from "../marketSummaryTable/marketSummary";
+import MarketSummaryTable from "../marketSummaryTable/mmarketSummary";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchMarketItemsStart,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTable, Column } from 'react-table';
-import './MarketSummary.css';
+import './mmarketSummary.css';
 
 interface MarketSummary {
   symbol: string;
