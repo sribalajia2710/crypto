@@ -1,4 +1,5 @@
 import Header from "./header";
+import { it, describe, expect } from 'vitest';
 import "@testing-library/jest-dom";
 import {
   render as renderWithProvider,

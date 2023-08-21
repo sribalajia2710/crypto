@@ -4,6 +4,7 @@ import {
   render as renderWithProvider,
   screen
 } from "../../test-utils";
+import { it, describe, expect } from 'vitest';
 
 describe('Banner Component', () => {
   it('displays the tagline heading', () => {

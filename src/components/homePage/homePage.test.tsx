@@ -4,6 +4,7 @@ import {
   screen
 } from "../../test-utils";
 import HomePage from './homePage';
+import { it, describe, expect } from 'vitest';
 
 describe('HomePage Component', () => {
   it('renders loading spinner when loading is true', () => {

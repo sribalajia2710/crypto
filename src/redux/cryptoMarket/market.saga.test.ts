@@ -11,6 +11,7 @@ import {
   fetchCurrencySearchStartAsync,
 } from "./market.saga.ts";
 import MarketDataActionTypes from "./market.types";
+import { it, describe } from 'vitest';
 
 describe("Market Sagas", () => {
   const marketItem = {

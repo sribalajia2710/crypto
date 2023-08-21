@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom';
+import { it, describe, expect } from 'vitest';
 import MarketSummaryTable from './marketSummary';
 import {
     render as renderWithProvider,

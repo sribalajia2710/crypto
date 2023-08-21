@@ -3,6 +3,7 @@ import {
   render as renderWithProvider,
   screen
 } from "../../test-utils";
+import { it, describe, expect } from 'vitest';
 import Footer from './footer';
 
 
